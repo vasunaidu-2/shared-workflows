@@ -27,3 +27,4 @@ jobs:
           echo "Version     : ${{ inputs.tag }}"
           echo "Environment : ${{ inputs.environment }}"
           echo "Region      : ${{ inputs.region }}"
+          echo "task completed"
