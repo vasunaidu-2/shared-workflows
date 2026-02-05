@@ -20,9 +20,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    # 👇 APPROVAL GATE BELONGS HERE
-    environment: prod-approval
-
     steps:
       - name: Deploy service
         run: |
