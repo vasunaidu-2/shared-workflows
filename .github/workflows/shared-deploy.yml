@@ -22,10 +22,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy service
+      - name: Show deployment context
         run: |
           echo "Service     : ${{ inputs.service }}"
-          echo "Version     : ${{ inputs.tag }}"
+          echo "Tag         : ${{ inputs.tag }}"
           echo "Environment : ${{ inputs.environment }}"
           echo "Region      : ${{ inputs.region }}"
           echo "task completed"
