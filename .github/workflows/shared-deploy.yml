@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Show deployment context
+      - name: Show ${{ inputs.operation }} context
         run: |
           echo "Service     : ${{ inputs.service }}"
           echo "Operation   : ${{ inputs.operation }}"
