@@ -15,7 +15,7 @@ on:
       region:
         required: true
         type: string
-      operation:              # ✅ ADD THIS
+      operation:
         required: true
         type: string
 
@@ -32,3 +32,7 @@ jobs:
           echo "Tag         : ${{ inputs.tag }}"
           echo "Environment : ${{ inputs.environment }}"
           echo "Region      : ${{ inputs.region }}"
+
+      - name: Execute ${{ inputs.operation }}
+        run: |
+          echo "Running ${{ inputs.operation }} for ${{ inputs.service }}"
