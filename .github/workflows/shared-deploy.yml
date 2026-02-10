@@ -15,18 +15,20 @@ on:
       region:
         required: true
         type: string
+      operation:              # ✅ ADD THIS
+        required: true
+        type: string
 
 jobs:
   deploy:
-    name: ${{ inputs.service }}
+    name: ${{ inputs.operation == 'rollback' && 'Rollback' || 'Deploy' }} – ${{ inputs.service }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Show deployment context
         run: |
           echo "Service     : ${{ inputs.service }}"
+          echo "Operation   : ${{ inputs.operation }}"
           echo "Tag         : ${{ inputs.tag }}"
           echo "Environment : ${{ inputs.environment }}"
           echo "Region      : ${{ inputs.region }}"
-
-    
