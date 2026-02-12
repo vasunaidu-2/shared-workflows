@@ -21,7 +21,6 @@ on:
 
 jobs:
   deploy:
-    name: ${{ inputs.operation == 'rollback' && 'Rollback' || 'Deploy' }} – ${{ inputs.service }}
     runs-on: ubuntu-latest
 
     steps:
